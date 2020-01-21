@@ -1,6 +1,10 @@
 
 Rails.application.routes.draw do
+
+  resource :sessions
+
   resources :users
+  
   get 'welcome/index'
  
   root 'welcome#index'
