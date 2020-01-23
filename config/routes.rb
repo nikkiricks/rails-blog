@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resource :sessions
 
   resources :users
-  
+
   get 'welcome/index'
  
   root 'welcome#index'
@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  get "/:page" => "static#show"
 end
